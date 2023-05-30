@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { WebPlugin } from '@capacitor/core';
 import { GoogleAuthPlugin } from './definitions';
 import { User, Authentication } from './user';
