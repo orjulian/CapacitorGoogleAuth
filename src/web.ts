@@ -45,7 +45,8 @@ export class GoogleAuthWeb extends WebPlugin implements GoogleAuthPlugin {
   platformJsLoaded() {
     gapi.load('auth2', () => {
       const clientConfig: gapi.auth2.ClientConfig = {
-        client_id: (document.getElementsByName('google-signin-client_id')[0] as any).content
+        client_id: (document.getElementsByName('google-signin-client_id')[0] as any).content,
+        plugin_name: 'foobar'
       };
 
       if (config.plugins.GoogleAuth != null && config.plugins.GoogleAuth.scopes != null) {
